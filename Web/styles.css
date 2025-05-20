@@ -1,0 +1,21 @@
+body {
+  background-color: #f8f9fa;
+}
+
+#task-list li {
+  transition: background-color 0.3s;
+}
+
+#task-list li:hover {
+  background-color: #f1f1f1;
+}
+
+.conteudo-tarefa {
+  min-width: 0;
+  word-break: break-word;
+}
+
+.tarefa-comentario {
+  word-break: break-word;
+  white-space: normal;
+}

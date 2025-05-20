@@ -1,0 +1,43 @@
+<form id="formulario-tarefa" class="p-4 rounded shadow-sm bg-light" style="max-width: 700px; margin: 4rem auto;">
+  <h3 class="mb-4 text-center fw-bold">Adicionar Nova Tarefa</h3>
+
+  <div class="mb-3">
+    <label for="Titulo" class="form-label fw-semibold">Título da Tarefa</label>
+    <input type="text" class="form-control" id="Titulo" placeholder="Ex: Finalizar relatório" required />
+  </div>
+
+  <div class="row g-3 mb-3">
+    <div class="col-md-6">
+      <label for="Data" class="form-label fw-semibold">Data</label>
+      <input type="date" class="form-control" id="Data" />
+    </div>
+
+    <div class="col-md-6">
+      <label for="Prioridade" class="form-label fw-semibold">Prioridade</label>
+      <select class="form-select" id="Prioridade">
+        <option value="Alta">Alta</option>
+        <option value="Média" selected>Média</option>
+        <option value="Baixa">Baixa</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label for="Comentario" class="form-label fw-semibold">Comentário (opcional)</label>
+    <textarea class="form-control" id="Comentario" rows="3" placeholder="Detalhes adicionais..."></textarea>
+  </div>
+
+  <div class="form-check form-switch mb-4">
+    <input class="form-check-input" type="checkbox" id="Notificar" />
+    <label class="form-check-label" for="Notificar">Notificar-me sobre essa tarefa</label>
+  </div>
+
+  <div class="d-flex justify-content-between">
+    <button type="button" class="btn btn-danger" onclick="mostrarTelaInicial()">Cancelar</button>
+    
+    <button type="button" class="btn btn-secondary" onclick="formularioTarefa.reset()">Limpar</button>
+
+    <button type="submit" class="btn btn-success" id="BotaoAdicionarTarefa">Adicionar Tarefa</button>
+    
+  </div>
+</form>
