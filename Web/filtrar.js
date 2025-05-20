@@ -1,4 +1,3 @@
-// Função para exibir o popup de filtro
 function mostrarPopupFiltro() {
   fetch("filtrar.html")
     .then(res => res.text())
@@ -7,7 +6,7 @@ function mostrarPopupFiltro() {
       modalWrapper.innerHTML = html;
       document.body.appendChild(modalWrapper);
 
-      // Pré-marcar os checkboxes com base nos filtrosAplicados
+      // Manter as check-box já aplicadas
       filtrosAplicados.forEach(filtro => {
         const checkbox = modalWrapper.querySelector(`#filtro${capitalizar(filtro)}`);
         if (checkbox) checkbox.checked = true;
@@ -43,7 +42,7 @@ function aplicarFiltros(modalWrapper) {
   aplicarFiltrosNaLista(); // aplica na lista visual
 }
 
-// Renderiza os filtros aplicados em badges azuis clicáveis
+// Renderiza os filtros aplicados em marcações azuis removíveis
 function renderizarFiltrosAtivos() {
   const container = document.getElementById("filtros-ativos");
   container.innerHTML = "";
@@ -62,7 +61,6 @@ function renderizarFiltrosAtivos() {
   });
 }
 
-// Traduz nome técnico dos filtros para rótulo legível
 function traduzirFiltro(nome) {
   const map = {
     atrasadas: "Atrasadas",
@@ -75,7 +73,6 @@ function traduzirFiltro(nome) {
   return map[nome] || nome;
 }
 
-// Aplica os filtros diretamente à lista de tarefas
 function aplicarFiltrosNaLista() {
   const hoje = new Date();
   hoje.setHours(0, 0, 0, 0);

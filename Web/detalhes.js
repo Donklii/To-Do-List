@@ -25,7 +25,7 @@ function exibirDetalhesTarefa(tarefa) {
   document.getElementById("detalhe-notificar").textContent = tarefa.notificar ? "Sim" : "Não";
   document.getElementById("detalhe-criado-em").textContent = tarefa.criadoEm;
 
-  // Atualizar a cor da borda superior
+  // Cor da borda superior
   document.getElementById("cabecalho-detalhes").className = `bg-${obterCorPrioridade(tarefa.prioridade)} rounded-top`;
 
   // Verificar atraso
